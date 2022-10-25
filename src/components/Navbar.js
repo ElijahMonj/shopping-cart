@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState,useEffect } from "react";
 import {Link, NavLink} from 'react-router-dom'
 const Navbar = () => {
+
     return (
         <nav>
-            <div>
+            <div className="Navbar">
                 <a>Vestir</a>
                 <ul>
                     <li><NavLink exact to="/">Home</NavLink></li>
@@ -11,7 +12,9 @@ const Navbar = () => {
                     <li><NavLink to="/about">About</NavLink></li>
                 </ul>
             </div>
+            
         </nav>
     )
 }
+
 export default Navbar
