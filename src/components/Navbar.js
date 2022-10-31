@@ -2,14 +2,15 @@ import React, { useState,useEffect } from "react";
 import {Link, NavLink} from 'react-router-dom'
 const Navbar = () => {
 
+
     return (
         <nav>
             <div className="Navbar">
-                <a>Vestir</a>
+                <div className="title">Vestir</div>
                 <ul>
-                    <li><NavLink exact to="/">Home</NavLink></li>
-                    <li><NavLink to="/cart">Cart</NavLink></li>
-                    <li><NavLink to="/about">About</NavLink></li>
+                    <NavLink exact to="/">Home</NavLink>
+                    <NavLink to="/cart">Cart</NavLink>
+                    <NavLink to="/about">About</NavLink>
                 </ul>
             </div>
             

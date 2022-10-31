@@ -4,11 +4,124 @@
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
+  flex-grow: 1;
+  padding-left: 180px;
+  padding-right: 180px;
+}
+.title{
+  font-size: 50px;
 }
 ul{
   display: flex;
+  margin: 0px;
 }
-li{
-  padding: 20px;
+
+.active{
+  background-color: aqua;
+}
+a{
+  padding: 30px;
   list-style-type: none;
+  text-decoration: none;
 }
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  margin-left: 180px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  margin-right: 180px;
+ 
+}
+.item{
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  padding: 20px; 
+}
+button{
+  padding: 12px;
+  border: 0px;
+  background-color: beige;
+}
+button:hover{
+  background-color: brown;
+  cursor: pointer;
+}
+.item img{
+  height: 400px;
+  width: 400px;
+}
+
+
+
+
+
+
+
+
+
+
+
+header{
+  font-size: 40px;
+  text-align: center;
+}
+.cart{
+  width: 70%;
+  margin: 0 auto;
+  background-color: aquamarine;
+}
+.tableHead{
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  padding: 20px;
+  border-bottom: 2px solid black;
+  font-size: 25px;
+}
+.thItems{
+  
+  text-align: center;
+}
+.thQuantity,.thSubtotal{
+  text-align: center;
+ 
+}
+.checkOutImage{
+  
+}
+.checkOutImage img{
+  height: 200px;
+}
+.toCheckOut{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  margin-top: 20px;
+
+}
+.checkOutDetails{
+ display: flex;
+ justify-content: space-around;
+ height: 80%;
+ flex-direction: column;
+}
+.btnRemove{
+  width: 150px;
+}
+.checkOutDetails .itemName{
+ font-size: 23px;
+}
+.checkOutQuantity{
+  
+  text-align: center;
+}
+.checkOutSubtotal{
+ text-align: center;
+}
+
+
