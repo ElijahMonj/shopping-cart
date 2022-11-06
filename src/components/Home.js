@@ -39,42 +39,42 @@ const Home = (props)=>{
                     <div className="itemName">{props.cartItem_1[0]}</div>
                     <div className="itemPrice">{"$"+props.cartItem_1[2]}</div>
                     <button onClick={()=>add1()}>Add To Cart</button>
-                    <div>{props.cartItem_1[1]}</div>
+                    
                 </div>
                 <div className="item">
                     <img src={itemPic_2}></img>
                     <div className="itemName">{props.cartItem_2[0]}</div>
                     <div className="itemPrice">{"$"+props.cartItem_2[2]}</div>
                     <button onClick={()=>add2()}>Add To Cart</button>
-                    <div>{props.cartItem_2[1]}</div>
+                   
                 </div>
                 <div className="item">
                     <img src={itemPic_3}></img>
                     <div className="itemName">{props.cartItem_3[0]}</div>
                     <div className="itemPrice">{"$"+props.cartItem_3[2]}</div>
                     <button onClick={()=>add3()}>Add To Cart</button>
-                    <div>{props.cartItem_3[1]}</div>
+                    
                 </div>
                 <div className="item">
                     <img src={itemPic_4}></img>
                     <div className="itemName">{props.cartItem_4[0]}</div>
                     <div className="itemPrice">{"$"+props.cartItem_4[2]}</div>
                     <button onClick={()=>add4()}>Add To Cart</button>
-                    <div>{props.cartItem_4[1]}</div>
+                   
                 </div>
                 <div className="item">
                     <img src={itemPic_5}></img>
                     <div className="itemName">{props.cartItem_5[0]}</div>
                     <div className="itemPrice">{"$"+props.cartItem_5[2]}</div>
                     <button onClick={()=>add5()}>Add To Cart</button>
-                    <div>{props.cartItem_5[1]}</div>
+                    
                 </div>
                 <div className="item">
                     <img src={itemPic_6}></img>
                     <div className="itemName">{props.cartItem_6[0]}</div>
                     <div className="itemPrice">{"$"+props.cartItem_6[2]}</div>
                     <button onClick={()=>add6()}>Add To Cart</button>
-                    <div>{props.cartItem_6[1]}</div>
+                   
                 </div>
 
                 

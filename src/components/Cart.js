@@ -118,7 +118,7 @@ const Cart = (props)=>{
                                 
                                 <div className="checkOutDetails">
                                     <div className="itemName">{number[0]}</div>
-                                    <div className="itemNameDetails">{cart.indexOf(number)}</div>
+                                    <div className="itemNameDetails">Small</div>
                                     <button className="btnRemove" onClick={()=>remove(number[0])} >Remove</button>
                                 </div>
                                 <div className="checkOutQuantity">
@@ -136,7 +136,48 @@ const Cart = (props)=>{
       return listItems
     }
     function showCart(){
+      if((props.cartItem_1[1]!==0)||(props.cartItem_2[1]!==0)||(props.cartItem_3[1]!==0)||(props.cartItem_4[1]!==0)
+      ||(props.cartItem_5[1]!==0)||(props.cartItem_6[1]!==0)){
+        return (
+          <div className="cart">
+          <div className="tableHead">
+              <div className="thItems">Items</div>
+              <div className="thQuantity">Quantity</div>
+              <div className="thSubtotal">Subtotal</div>
+              
+          </div>
+          <div className="cartItems">
+          {listItems()}
+          </div>
+          <div className="totality">
+          <div>
+          </div>
+          <div>
+          </div>
+          <div>
+          </div>
+            <div className="totalText">{"$"+summary()}</div>
+          </div>
+          <div className="totality">
+          <div>
+          </div>
+          <div>
+          </div>
+          <div>
+          </div>
+            <button className="btnCheckOut">Check Out</button>
+          </div>
+          
+          
       
+      </div>
+        )
+        }else{
+          return(
+            <div className="empty">Your shopping cart is empty.</div>
+          )
+        }
+        
     }
     function summary(){
         let total=0;
@@ -148,40 +189,9 @@ const Cart = (props)=>{
     return (
         <div>
            
-            <header>{props.cartItem_1[1]}</header>
+            <header>Cart</header>
             <div className="container">
-                <div className="cart">
-                    <div className="tableHead">
-                        <div className="thItems">Items</div>
-                        <div className="thQuantity">Quantity</div>
-                        <div className="thSubtotal">Subtotal</div>
-                        
-                    </div>
-                    <div className="cartItems">
-                    {listItems()}
-                    </div>
-                    <div className="totality">
-                    <div>
-                    </div>
-                    <div>
-                    </div>
-                    <div>
-                    </div>
-                      <div className="totalText">{"$"+summary()}</div>
-                    </div>
-                    <div className="totality">
-                    <div>
-                    </div>
-                    <div>
-                    </div>
-                    <div>
-                    </div>
-                      <button className="btnCheckOut">Check Out</button>
-                    </div>
-                    
-                    
-                
-                </div>
+               {showCart()}
             </div>
         </div>
     )

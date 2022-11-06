@@ -1,5 +1,8 @@
+html{
+  
+}
 .Navbar{
-  background-color: bisque;
+  background-color: #2C3333;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -7,6 +10,7 @@
   flex-grow: 1;
   padding-left: 180px;
   padding-right: 180px;
+  color: #E7F6F2;
 }
 .title{
   font-size: 50px;
@@ -17,12 +21,13 @@ ul{
 }
 
 .active{
-  background-color: aqua;
+  background-color: #395B64;
 }
-a{
+.Navbar a{
   padding: 30px;
   list-style-type: none;
   text-decoration: none;
+  color: #E7F6F2;
 }
 .container{
   display: flex;
@@ -46,10 +51,12 @@ a{
 button{
   padding: 12px;
   border: 0px;
-  background-color: beige;
+  background-color: #395B64;
+  color:#E7F6F2;
 }
 button:hover{
-  background-color: brown;
+  background-color: #A5C9CA;
+  color: #2C3333;
   cursor: pointer;
 }
 .item img{
@@ -78,7 +85,12 @@ margin-top: 30px;
 }
 
 
-
+.empty{
+  color: lightgray;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 50px;
+}
 
 
 
@@ -87,11 +99,13 @@ margin-top: 30px;
 header{
   font-size: 40px;
   text-align: center;
+  margin-top: 30px;
+  font-weight: bolder;
 }
 .cart{
   width: 70%;
   margin: 0 auto;
-  background-color: aquamarine;
+  
 }
 .tableHead{
   display: grid;
@@ -183,8 +197,9 @@ footer{
   justify-content: center;
   padding: 10px;
   align-items: center;
-  background-color: aquamarine;
+  background-color: #2C3333;
   position: fixed;
+  color: #E7F6F2;
   bottom: 0;
   gap: 10px;
   width: 100%;
