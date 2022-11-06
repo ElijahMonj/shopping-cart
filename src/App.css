@@ -57,8 +57,25 @@ button:hover{
   width: 400px;
 }
 
+.missionVision{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
 
-
+width: 70%;
+gap: 50px;
+margin-bottom: auto;
+margin-right: auto;
+margin-left: auto;
+margin-top: 30px;
+}
+.missionVision > *{
+ text-align: center;
+ font-size: 30px;
+ line-height:1.7;
+}
+.titleAbout{
+  font-weight: bolder;
+}
 
 
 
@@ -117,11 +134,63 @@ header{
  font-size: 23px;
 }
 .checkOutQuantity{
-  
+  display: flex;
   text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.checkOutQuantity > *{
+  
+  height: 20px;
+  width: 20px;
+}
+.minus{
+  border-top: 1.5px solid black;
+  border-left: 1.5px solid black;
+  border-bottom: 1.5px solid black;
+}
+.add{
+  border-top: 1.5px solid black;
+  border-right: 1.5px solid black;
+  border-bottom: 1.5px solid black;
+}
+.qnty{
+  border-top: 1.5px solid black;
+  border-left: 1.5px solid black;
+  border-bottom: 1.5px solid black;
+  border-right: 1.5px solid black;
 }
 .checkOutSubtotal{
  text-align: center;
 }
+.totality{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+   margin-bottom: 40px;
+}
+.totalText{
+  text-align: center;
+}
+.btnCheckOut{
+  width: 150px;
+  align-self: center;
+  margin: auto;
+}
+
+footer{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding: 10px;
+  align-items: center;
+  background-color: aquamarine;
+  position: fixed;
+  bottom: 0;
+  gap: 10px;
+  width: 100%;
+}
 
 
+#gh{
+  width: 30px;
+}

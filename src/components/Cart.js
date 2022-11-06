@@ -5,6 +5,8 @@ import itemPic_3 from './images/item_3.png'
 import itemPic_4 from './images/item_4.jpg'
 import itemPic_5 from './images/item_5.jpg'
 import itemPic_6 from './images/item_6.jpg'
+import addSVG from './images/add.svg'
+import minusSVG from './images/minus.svg'
 
 const Cart = (props)=>{
    
@@ -13,11 +15,14 @@ const Cart = (props)=>{
     useEffect(() => {
         formCartArray();
         
-    }, [props.items]);
+    }, [props.cartItem_1,props.cartItem_2,props.cartItem_3,props.cartItem_4,props.cartItem_5,props.cartItem_6]);
 
 
+   
+    
     function formCartArray(){
         let cartArr=[]
+
         if(props.cartItem_1[3]===true){      
                  
             cartArr.push(props.cartItem_1.concat(itemPic_1));
@@ -38,11 +43,74 @@ const Cart = (props)=>{
             cartArr.push(props.cartItem_6.concat(itemPic_6));
         }
         console.log(cartArr)
-        
+        //props.changeCart6(props.cartItem_6[0],props.cartItem_6[1],props.cartItem_6[2],props.cartItem_6[3],props.cartItem_6[4],)
         setCart(cartArr)
        
     }
-    
+    function remove(index){
+      console.log("index is"+index)
+      if(index===props.cartItem_1[0]){
+        props.changeCart1([props.cartItem_1[0],0,props.cartItem_1[2],false])
+      }
+      if(index===props.cartItem_2[0]){
+        props.changeCart2([props.cartItem_2[0],0,props.cartItem_2[2],false])
+      }
+      if(index===props.cartItem_3[0]){
+        props.changeCart3([props.cartItem_3[0],0,props.cartItem_3[2],false])
+      }
+      if(index===props.cartItem_4[0]){
+        props.changeCart4([props.cartItem_4[0],0,props.cartItem_4[2],false])
+      }
+      if(index===props.cartItem_5[0]){
+        props.changeCart5([props.cartItem_5[0],0,props.cartItem_5[2],false])
+      }
+      if(index===props.cartItem_6[0]){
+        props.changeCart6([props.cartItem_6[0],0,props.cartItem_6[2],false])
+      } 
+    }
+    function minus(index){
+      console.log("index is"+index)
+      if(index===props.cartItem_1[0]){
+        props.changeCart1([props.cartItem_1[0],props.cartItem_1[1]-1,props.cartItem_1[2],false])
+      }
+      if(index===props.cartItem_2[0]){
+        props.changeCart2([props.cartItem_2[0],props.cartItem_2[1]-1,props.cartItem_2[2],false])
+      }
+      if(index===props.cartItem_3[0]){
+        props.changeCart3([props.cartItem_3[0],props.cartItem_3[1]-1,props.cartItem_3[2],false])
+      }
+      if(index===props.cartItem_4[0]){
+        props.changeCart4([props.cartItem_4[0],props.cartItem_4[1]-1,props.cartItem_4[2],false])
+      }
+      if(index===props.cartItem_5[0]){
+        props.changeCart5([props.cartItem_5[0],props.cartItem_5[1]-1,props.cartItem_5[2],false])
+      }
+      if(index===props.cartItem_6[0]){
+        props.changeCart6([props.cartItem_6[0],props.cartItem_6[1]-1,props.cartItem_6[2],false])
+      } 
+    }
+    function add(index){
+      console.log("index is"+index)
+      if(index===props.cartItem_1[0]){
+        props.changeCart1([props.cartItem_1[0],props.cartItem_1[1]+1,props.cartItem_1[2],false])
+      }
+      if(index===props.cartItem_2[0]){
+        props.changeCart2([props.cartItem_2[0],props.cartItem_2[1]+1,props.cartItem_2[2],false])
+      }
+      if(index===props.cartItem_3[0]){
+        props.changeCart3([props.cartItem_3[0],props.cartItem_3[1]+1,props.cartItem_3[2],false])
+      }
+      if(index===props.cartItem_4[0]){
+        props.changeCart4([props.cartItem_4[0],props.cartItem_4[1]+1,props.cartItem_4[2],false])
+      }
+      if(index===props.cartItem_5[0]){
+        props.changeCart5([props.cartItem_5[0],props.cartItem_5[1]+1,props.cartItem_5[2],false])
+      }
+      if(index===props.cartItem_6[0]){
+        props.changeCart6([props.cartItem_6[0],props.cartItem_6[1]+1,props.cartItem_6[2],false])
+      } 
+    }
+    function listItems(){
     let listItems = cart.map((number) =>
     <div className="cartItemList">
                             <div className="toCheckOut">
@@ -50,16 +118,26 @@ const Cart = (props)=>{
                                 
                                 <div className="checkOutDetails">
                                     <div className="itemName">{number[0]}</div>
-                                    <div className="itemNameDetails">Small</div>
-                                    <button className="btnRemove">Remove</button>
+                                    <div className="itemNameDetails">{cart.indexOf(number)}</div>
+                                    <button className="btnRemove" onClick={()=>remove(number[0])} >Remove</button>
                                 </div>
                                 <div className="checkOutQuantity">
-                                    {number[1]}
+                                <img src={minusSVG} className="minus" onClick={()=>minus(number[0])}></img>
+                                    <div className="qnty">{number[1]}</div>
+                                    <img src={addSVG} className="add" onClick={()=>add(number[0])}></img>
                                 </div>
-                                <div className="checkOutSubtotal">{"$"+(number[2]*number[1])}</div>
-                            </div>
-                        </div>  
+                                <div className="checkOutSubtotal">{"$"+
+                                
+                                Math.round(((number[2]*number[1]) + Number.EPSILON) * 100) / 100
+                                }</div>
+                            </div>                      
+                        </div>                 
     );
+      return listItems
+    }
+    function showCart(){
+      
+    }
     function summary(){
         let total=0;
         cart.map((number)=>
@@ -80,9 +158,27 @@ const Cart = (props)=>{
                         
                     </div>
                     <div className="cartItems">
-                    {listItems}
+                    {listItems()}
                     </div>
-                    <div>{summary()}</div>
+                    <div className="totality">
+                    <div>
+                    </div>
+                    <div>
+                    </div>
+                    <div>
+                    </div>
+                      <div className="totalText">{"$"+summary()}</div>
+                    </div>
+                    <div className="totality">
+                    <div>
+                    </div>
+                    <div>
+                    </div>
+                    <div>
+                    </div>
+                      <button className="btnCheckOut">Check Out</button>
+                    </div>
+                    
                     
                 
                 </div>
