@@ -19,6 +19,7 @@ const App = () => {
  
   const [cartItem_1, setCartItem_1] = useState(["Vestir Plain White Tee",0,9.95,false]);
   useEffect(() => {
+    document.title = 'Vestir';
     if(cartItem_1[1]!==0){
       setCartItem_1([cartItem_1[0],cartItem_1[1],cartItem_1[2],true])    
     }else{

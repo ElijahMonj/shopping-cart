@@ -30,7 +30,7 @@ const Home = (props)=>{
         props.changeCart6([props.cartItem_6[0],props.cartItem_6[1]+1,props.cartItem_6[2],true]);     
       }
     return (
-        <div>
+        <div className="mainCon">
            
             <div className="container">
 

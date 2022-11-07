@@ -1,5 +1,5 @@
 html{
-  
+  background-color: #E7F6F2;
 }
 .Navbar{
   background-color: #2C3333;
@@ -29,16 +29,20 @@ ul{
   text-decoration: none;
   color: #E7F6F2;
 }
+.mainCon{
+  
+}
 .container{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 40px;
-  margin-left: 180px;
-  margin-top: 60px;
-  margin-bottom: 60px;
-  margin-right: 180px;
- 
+  padding-left: 180px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  padding-right: 180px;
+  background-color: #E7F6F2;
+  
 }
 .item{
   width: 400px;
@@ -51,12 +55,12 @@ ul{
 button{
   padding: 12px;
   border: 0px;
-  background-color: #395B64;
+  background-color: #2C3333;
   color:#E7F6F2;
 }
 button:hover{
-  background-color: #A5C9CA;
-  color: #2C3333;
+  background-color: #395B64;
+  color: #E7F6F2;
   cursor: pointer;
 }
 .item img{
@@ -67,7 +71,7 @@ button:hover{
 .missionVision{
 display: grid;
 grid-template-columns: 1fr 1fr 1fr;
-
+background-color: #E7F6F2;
 width: 70%;
 gap: 50px;
 margin-bottom: auto;
@@ -99,8 +103,9 @@ margin-top: 30px;
 header{
   font-size: 40px;
   text-align: center;
-  margin-top: 30px;
+  padding-top: 30px;
   font-weight: bolder;
+  background-color: #E7F6F2;
 }
 .cart{
   width: 70%;
