@@ -77,7 +77,7 @@ const App = () => {
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route exact path="/" element={<Home 
+        <Route exact path="/shopping-cart" element={<Home 
         cartItem_1={cartItem_1} changeCart1={cartItem_1=>setCartItem_1(cartItem_1)}
         cartItem_2={cartItem_2} changeCart2={cartItem_2=>setCartItem_2(cartItem_2)}
         cartItem_3={cartItem_3} changeCart3={cartItem_3=>setCartItem_3(cartItem_3)}
