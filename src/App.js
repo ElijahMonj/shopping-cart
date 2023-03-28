@@ -12,6 +12,7 @@ import {
   Route
 } from "react-router-dom";
 import { render } from '@testing-library/react'
+import { HashRouter } from "react-router-dom";
 //images
 
 
@@ -74,7 +75,7 @@ const App = () => {
   },[cartItem_6[1]]);
   
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Navbar />
       <Routes>
         <Route exact path="/shopping-cart" element={<Home 
@@ -100,7 +101,7 @@ const App = () => {
       </Routes>
       <Credits />
       
-    </BrowserRouter>
+    </HashRouter>
   );
   
 }
